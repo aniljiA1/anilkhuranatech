@@ -16,6 +16,11 @@ A full-stack web application to track job applications using a Kanban board. Bui
 
 ---
 
+## Live Demo
+ Deploy: https://anilkhuranatech.vercel.app/
+
+---
+
 ## 🛠️ Tech Stack
 
 ### Frontend
@@ -64,7 +69,7 @@ ai-job-tracker/
 ### 1️⃣ Clone the repository
 
 ```
-git clone https://github.com/your-username/ai-job-tracker.git
+git clone https://github.com/aniljiA1/anilkhuranatech.git
 cd ai-job-tracker
 ```
 
@@ -94,6 +99,8 @@ npm install
 
 ```
 VITE_API_URL=http://localhost:5000/api
+
+https://anilkhuranatech-2.onrender.com
 ```
 
 ### Server (.env)
@@ -113,6 +120,7 @@ JWT_SECRET=your_secret_key
 ```
 cd server
 npm run dev
+http://localhost:5000/
 ```
 
 ### Start Frontend
@@ -120,44 +128,10 @@ npm run dev
 ```
 cd client
 npm run dev
+http://localhost:5173/
 ```
 
----
 
-## 📸 Screenshots
-
-* Dashboard with Kanban Board
-* Add Job Form
-* Authentication Pages
-
-*(Add screenshots here)*
-
----
-
-## 🧠 Future Improvements
-
-* 🔄 Drag & Drop Kanban (like Trello)
-* 📊 Analytics Dashboard
-* 📅 Interview reminders
-* 🤖 AI resume suggestions
-* 🌐 Deployment (Vercel + Render)
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome!
-
-1. Fork the repo
-2. Create a new branch
-3. Make changes
-4. Submit a Pull Request
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License.
 
 ---
 
@@ -167,4 +141,3 @@ This project is licensed under the MIT License.
 
 ---
 
-⭐ If you like this project, don’t forget to star the repo!
