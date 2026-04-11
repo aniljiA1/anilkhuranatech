@@ -38,12 +38,27 @@ export const register = async (req: Request, res: Response) => {
 
 export const login = async (req: Request, res: Response) => {
   const { email, password } = req.body;
+
   const user = await User.findOne({ email });
 
-  if (!user) return res.status(404).json({ message: "User not found" });
+  // ✅ FIX 1: check user + password exists
+  if (!user || !user.password) {
+    return res.status(404).json({
+      message: "User not found",
+    });
+  }
 
+  // ✅ FIX 2: safe bcrypt compare
   const match = await bcrypt.compare(password, user.password);
-  if (!match) return res.status(400).json({ message: "Invalid password" });
 
-  res.json({ token: generateToken(user.id), user });
+  if (!match) {
+    return res.status(400).json({
+      message: "Invalid password",
+    });
+  }
+
+  res.json({
+    token: generateToken(user.id),
+    user,
+  });
 };
